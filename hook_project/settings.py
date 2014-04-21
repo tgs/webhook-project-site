@@ -137,6 +137,7 @@ INSTALLED_APPS = [
     
     # project
     "hook_project",
+    "badgekit_webhooks",
 ]
 
 # A sample logging configuration. The only tangible logging
