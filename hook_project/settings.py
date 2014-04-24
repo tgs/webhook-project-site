@@ -172,7 +172,13 @@ LOGGING = {
             "level": "ERROR",
             "filters": ["require_debug_false"],
             "class": "django.utils.log.AdminEmailHandler"
+        },
+        'console': {
+            'level': "INFO",
+            "class": "logging.StreamHandler",
+            "stream": sys.stdout,
         }
+
     },
     "loggers": {
         "django.request": {
@@ -180,6 +186,9 @@ LOGGING = {
             "level": "ERROR",
             "propagate": True,
         },
+        "badgekit_webhooks": {
+            "handlers": ["console"],
+        }
     }
 }
 
