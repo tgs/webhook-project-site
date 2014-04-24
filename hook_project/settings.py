@@ -1,10 +1,18 @@
 import os
 
 
+def env(name):
+    val = os.environ.get(name)
+    if val == 'True':
+        return True
+    elif val == 'False':
+        return False
+    return val
+
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
 PACKAGE_ROOT = os.path.abspath(os.path.dirname(__file__))
 
-DEBUG = True
+DEBUG = env('DEBUG')
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = [
@@ -78,7 +86,7 @@ STATICFILES_FINDERS = [
 ]
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = "cz0t$rk11bdrt95cn-56k&p559o_zuu5-+w=%^8j_-_gf0tqry"
+SECRET_KEY = env('SESSION_SECRET_KEY')
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = [
