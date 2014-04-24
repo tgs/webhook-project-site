@@ -1,12 +1,15 @@
 import os
+import sys
 
 
-def env(name):
+def env(name, default=None):
     val = os.environ.get(name)
     if val == 'True':
         return True
     elif val == 'False':
         return False
+    elif val is None:
+        return default
     return val
 
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
@@ -14,6 +17,9 @@ PACKAGE_ROOT = os.path.abspath(os.path.dirname(__file__))
 
 DEBUG = env('DEBUG')
 TEMPLATE_DEBUG = DEBUG
+
+BADGEKIT_SKIP_JWT_AUTH = env('BADGEKIT_SKIP_JWT_AUTH', False)
+BADGEKIT_JWT_KEY = env('BADGEKIT_JWT_KEY')
 
 ADMINS = [
     # ("Your Name", "your_email@example.com"),
