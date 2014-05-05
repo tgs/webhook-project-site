@@ -27,12 +27,20 @@ ADMINS = [
 
 MANAGERS = ADMINS
 
+# Heroku recommended config
+# https://devcenter.heroku.com/articles/getting-started-with-django
+import dj_database_url
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": "dev.db",
-    }
-}
+        'default': dj_database_url.config(
+            default='sqlite:///dev.db'),
+        }
+
+# Honor the 'X-Forwarded-Proto' header for request.is_secure()
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# Allow all host headers
+ALLOWED_HOSTS = ['*']
+
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
