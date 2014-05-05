@@ -6,6 +6,6 @@ eventlog==0.7.0
 django-jsonfield==0.9.12
 dj-database-url==0.3.0
 dj-static==0.0.5
-https://github.com/tgs/django-badgekit-webhooks/tarball/master
 MySQL-python==1.2.5
 gunicorn==18.0
+https://github.com/tgs/django-badgekit-webhooks/tarball/master
