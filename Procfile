@@ -1,1 +1,1 @@
-web: ./manage.py runserver
+web: gunicorn hook_project.wsgi
