@@ -196,6 +196,7 @@ LOGGING = {
         },
         "badgekit_webhooks": {
             "handlers": ["console"],
+            "level": "INFO",
         }
     }
 }
