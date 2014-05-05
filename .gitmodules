@@ -1,0 +1,3 @@
+[submodule "apps/badgekit_webhooks"]
+	path = apps/badgekit_webhooks
+	url = https://github.com/tgs/django-badgekit-webhooks

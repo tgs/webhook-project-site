@@ -15,6 +15,9 @@ def env(name, default=None):
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
 PACKAGE_ROOT = os.path.abspath(os.path.dirname(__file__))
 
+#APPS_ROOT = os.path.join(PROJECT_ROOT, 'apps')
+#sys.path.insert(0, os.path.join(APPS_ROOT, 'badgekit_webhooks'))
+
 DEBUG = env('DEBUG')
 TEMPLATE_DEBUG = DEBUG
 
