@@ -201,7 +201,11 @@ LOGGING = {
         "badgekit_webhooks": {
             "handlers": ["console"],
             "level": "INFO",
-        }
+        },
+        "waitress": {
+            "handlers": ['console'],
+            'level': 'INFO',
+        },
     }
 }
 
