@@ -1,4 +1,4 @@
-update-submodules: clean-wd
+update-submodules: require-clean-wd
 	cd apps/badgekit_webhooks \
 		&& git pull origin master \
 		&& cd .. \
@@ -6,12 +6,12 @@ update-submodules: clean-wd
 		&& git commit -m "Update badgekit_webhooks"
 
 
-clean-wd:
+require-clean-wd:
 	git status
 	git diff --quiet --exit-code
 	git diff --cached --quiet --exit-code
 
-deploy: clean-wd
+deploy: require-clean-wd
 	git push heroku master
 
-.PHONY: clean-wd update-submodules deploy
+.PHONY: require-clean-wd update-submodules deploy
