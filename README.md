@@ -20,6 +20,6 @@ files in the django-badgekit-webhooks module.  Neat.
 
 BUT, if you want to develop `django-badgekit-webhooks`, be careful!  Working
 with submodules, it's easy to lose your work.  You may want to check out that
-project into a separate directory, and run `python setup.py develop` in its
-root directory, so that you have better control.  A submodule is used so that
-Heroku gathers it up in its deployment.  If there's a better way, tell me!
+project into a separate directory, and run `python setup.py develop` there,
+so that you have better control.  A submodule is used so that Heroku gathers
+it up in its deployment.  If there's a better way, tell me!
