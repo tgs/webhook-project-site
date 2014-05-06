@@ -223,7 +223,7 @@ if "smtp" in _backend_short.lower():
     EMAIL_PORT = 587
     EMAIL_USE_TLS = True
 
-ACCOUNT_OPEN_SIGNUP = True
+ACCOUNT_OPEN_SIGNUP = False
 ACCOUNT_USE_OPENID = False
 ACCOUNT_REQUIRED_EMAIL = False
 ACCOUNT_EMAIL_UNIQUE = True
