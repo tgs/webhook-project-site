@@ -14,4 +14,7 @@ require-clean-wd:
 deploy: require-clean-wd
 	git push heroku master
 
-.PHONY: require-clean-wd update-submodules deploy
+test:
+	scripts/check_env_settings.py
+
+.PHONY: require-clean-wd update-submodules deploy test
