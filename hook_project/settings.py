@@ -198,6 +198,10 @@ LOGGING = {
             "level": "ERROR",
             "propagate": True,
         },
+        "django.core.mail": {
+            "handlers": ["console"],
+            "level": "DEBUG",
+        },
         "badgekit_webhooks": {
             "handlers": ["console"],
             "level": "INFO",
