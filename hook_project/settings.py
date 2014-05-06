@@ -218,8 +218,7 @@ FIXTURE_DIRS = [
 ]
 
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
-_backend_short = env("EMAIL_BACKEND_TYPE", "console")
-if "smtp" in _backend_short.lower():
+if env('EMAIL_HOST'):
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
     EMAIL_HOST = env('EMAIL_HOST')
     EMAIL_HOST_USER = env('EMAIL_HOST_USER')
