@@ -11,4 +11,7 @@ clean-wd:
 	git diff --quiet --exit-code
 	git diff --cached --quiet --exit-code
 
-.PHONY: clean-wd update-submodules
+deploy: clean-wd
+	git push heroku master
+
+.PHONY: clean-wd update-submodules deploy
