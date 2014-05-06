@@ -12,13 +12,13 @@ Then:
 
     cd ../webhook-project-site      # this project
     pip install -r requirements.txt
-    python manage.py syncdb
 
 Then copy template.env to .env, and edit the settings.  Then:
 
+    foreman run python manage.py syncdb
     foreman start
 
-Now you should be able to navigate to http://localhost:8000/bk/hello/ and
+Now you should be able to navigate to http://localhost:5000/bk/hello/ and
 see "Hello, world. Badges!!!"
 
 The Django development server is fancy enough to notice that you've changed
