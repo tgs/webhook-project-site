@@ -158,7 +158,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.sites",
     "django.contrib.staticfiles",
-    
+    "django_inlinecss",
     # theme
     "bootstrapform",
     "pinax_theme_bootstrap",
