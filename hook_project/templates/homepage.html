@@ -7,33 +7,40 @@
 {% block body_class %}home{% endblock %}
 
 {% block banner %}
-    <h1>{% trans "Welcome to Pinax" %}</h1>
+    <h1>{% trans "OPEN edX Badges" %}</h1>
     <p>
         {% blocktrans %}
-        <b>Pinax</b> is a <a href="http://djangoproject.com/">Django</a>
-        project intended to provide a starting point for websites. By
-        integrating numerous reusable Django apps to take care of the
-        things that many sites have in common, it lets you focus on what
-        makes your site different.
+        Welcome to the <b>OPEN edX</b> contributor recognition program! Badges are one of our ways of supporting our <a href="http://code.edx.org">open source community</a> and rewarding our individual contributors with the recognition they deserve. 
         {% endblocktrans %}
     </p>
     
-    <h2>About Account Project</h2>
+    <h3>How to get involved</h3>
     <p>
         {% blocktrans %}
-        In addition to what is provided by the "zero" project, this project
-        provides thorough integration with django-user-accounts, adding
-        comprehensive account management functionality. It is a foundation
-        suitable for most sites that have user accounts.
+        Contribute to an open source project that has an impact on tens of thousands of learners. We share our codebase on <a href="http://github.com/edx/">GitHub</a> and discuss ideas on the <a href="http://groups.google.com/forum/#!forum/edx-code">mailing list</a>.
         {% endblocktrans %}
     </p>
     
-    {% if user.is_authenticated %}
+    
         {% url "what_next" as what_next_url %}
-        <p class="what_next">{% blocktrans %}Wondering <a href="{{ what_next_url }}" class="btn btn-primary large">What Next</a>?{% endblocktrans %}</p>
-    {% else %}
-        {% url "account_login" as login_url %}
-        {% url "account_signup" as signup_url %}
-        <p>{% blocktrans %}You can <a href="{{ login_url }}" class="btn btn-default">Log In</a> or <a href="{{ signup_url }}" class="btn btn-primary">Sign Up</a> to try out the site.{% endblocktrans %}</p>
-    {% endif %}
+        <p class="what_next">{% blocktrans %}Head on over to our community site and <a href="http://code.edx.org" class="btn btn-primary large">Get started</a> earning badges today.{% endblocktrans %}</p>
+    
+{% endblock %}
+
+{% block column-1 %}
+    <h2>About Open badges</h2>
+    <p>This project issues Mozilla Open Badges Infrastructure-compliant digital badges. That means you'll be able to take them with you and display them alongside credentials you've earned from other places.
+    <p><a class="btn btn-default" href="http://openbadges.org">Learn more &raquo;</a></p>
+{% endblock %}
+
+{% block column-2 %}
+    <h2>About edX</h2>
+    <p>Take great online courses from the world's best universities. OPEN edX is the open source platform that powers edX.org, a free source for high quality online courses led by expert instructors.</p>
+    <p><a class="btn btn-default" href="http://edx.org">edX.org &raquo;</a></p>
+{% endblock %}
+
+{% block column-3 %}
+    <h2>Contributor Badges</h2>
+    <p>Here are the badges available for contributors to OPEN edX.</p>
+    <p><a class="btn btn-default" href="#">See badges &raquo;</a></p>
 {% endblock %}
