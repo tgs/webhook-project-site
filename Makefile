@@ -5,7 +5,7 @@ sync-submodules: require-clean-wd
 		&& git add badgekit_webhooks \
 		&& git commit -m "Update badgekit_webhooks"
 
-pull: require-clean-wd
+pull:
 	git pull origin master
 	git submodule update --init --recursive
 
