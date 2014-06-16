@@ -8,6 +8,7 @@ from django.contrib import admin
 
 urlpatterns = patterns("",
     url(r"^$", TemplateView.as_view(template_name="homepage.html"), name="home"),
+    url(r"^bkadmin/$", TemplateView.as_view(template_name="badgekit_admin.html"), name="badgekit-admin"),
     url(r"^admin/", include(admin.site.urls)),
     url(r"^account/", include("account.urls")),
     url(r"^bk/", include("badgekit_webhooks.urls")),
